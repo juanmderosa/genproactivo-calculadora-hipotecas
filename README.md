@@ -3,7 +3,7 @@
 Realizada con
 
 - React Js
-- Recharts
+- Echarts
 - React Hook Form
 - Zustand
 
