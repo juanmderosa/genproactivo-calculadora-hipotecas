@@ -1,0 +1,36 @@
+#ufValue {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple);
+  border-radius: 15px;
+  gap: 30px;
+  margin-bottom: 20px;
+  color: var(--blancoOpaco);
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+  h3 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  form {
+    font-size: 14px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    @media screen and (max-width: 500px) {
+      text-align: center;
+    }
+    label {
+      display: flex;
+      width: fit-content;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--blancoPuro);
+    }
+  }
+}

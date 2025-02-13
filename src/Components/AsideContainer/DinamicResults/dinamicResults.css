@@ -1,0 +1,55 @@
+.dinamicResultsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background-color: var(--grisClaro2);
+  padding: 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  .estimatedMontlyPayment {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--grisClaro2);
+    padding-bottom: 1rem;
+    gap: 0.5rem;
+    text-align: left;
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      align-items: center;
+      p {
+        font-size: 1.5rem;
+      }
+    }
+    p {
+      color: var(--gris);
+    }
+    strong {
+      font-size: 1.5rem;
+    }
+  }
+  .asociatedValues {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    text-align: left;
+    width: 100%;
+    div {
+      width: 100%;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        color: var(--gris);
+      }
+      strong {
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}

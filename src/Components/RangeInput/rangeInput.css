@@ -1,0 +1,15 @@
+.rangeInputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-block: 1rem;
+  input {
+    width: 100%;
+  }
+}
+
+.errorMessage {
+  font-size: 0.7rem;
+  color: var(--purple);
+  align-self: flex-end;
+}

@@ -1,0 +1,23 @@
+.calculationsDivs {
+  border-radius: 15px;
+  background-color: var(--green);
+  color: var(--gris);
+  font-size: 12px;
+  box-shadow: 1px 1px 20px var(--grisClaro);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  h4 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  div {
+    font-weight: 700;
+    p {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 16px;
+    }
+  }
+}

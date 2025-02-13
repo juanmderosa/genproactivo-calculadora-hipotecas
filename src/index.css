@@ -1,0 +1,185 @@
+:root {
+  --green: #97e02d;
+  --purple: #713abe;
+  --grisClaro: #dee6ed;
+  --grisClaro2: #00000008;
+  --grisMedio: #555555;
+  --gris: #3d3d3d;
+  --negroClaro: #242424;
+  --negro: #000000;
+  --blancoPuro: #ffffff;
+  --blancoOpaco: #e2e2e2;
+  --baseRadius: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#form-aside-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 50px;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+#form {
+  width: 50%;
+  padding: 15px;
+}
+
+#asideContainer {
+  width: 50%;
+}
+
+#details {
+  width: 100%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: var(--purple);
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Estilizar la parte completada del rango */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--purple);
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 3px;
+  background: var(--purple);
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--green);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--green);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Estilizar la parte completada del rango en navegadores WebKit */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--green) var(--progress),
+    var(--purple) var(--progress)
+  );
+}
+
+input[type="range"] {
+  --progress: 0%;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* Aplicar el progreso dinámico */
+input[type="range"] {
+  background: linear-gradient(
+    to right,
+    var(--green) 0%,
+    var(--green) var(--progress),
+    var(--purple) var(--progress),
+    var(--purple) 100%
+  );
+}
+
+input[type="range"]::-moz-range-progress {
+  background: var(--green);
+  height: 6px;
+  border-radius: 5px;
+}
+
+/* Quitar las flechas en WebKit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quitar las flechas en Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:not(input[type="range"]) {
+  border: 1px solid var(--grisClaro);
+  height: 1.5rem;
+  border-radius: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+}
+
+label {
+  color: var(--gris);
+}
+
+input:not(input[type="range"]):focus {
+  outline: 1px solid var(--purple);
+  /*   border: 1px solid var(--purple); */
+}
+
+input[type="radio"] {
+  background-color: var(--blancoPuro) !important;
+  appearance: none;
+  width: 10px;
+  height: 10px !important;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s linear;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--green) !important;
+  appearance: none;
+  width: 12px;
+  height: 12px !important;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}

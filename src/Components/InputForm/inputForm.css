@@ -1,0 +1,70 @@
+.inputFormMainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.inputFormContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.inputFormContainer > label {
+  font-size: 12px;
+}
+
+.inputForm {
+  padding-inline: 0.5rem;
+  font-size: 12px;
+  flex: 1;
+  color: var(--gris);
+}
+
+.inputPadLeft {
+  padding-left: 17%;
+}
+.inputPadRight {
+  padding-right: 17%;
+}
+
+.inputMainContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.clarificationTextContainer {
+  position: absolute;
+
+  background-color: var(--grisClaro2);
+  height: 1.5rem;
+  min-width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-inline: 0.3rem;
+  color: var(--gris);
+  font-size: 12px;
+}
+
+.leftPosition {
+  width: 15%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.rightPosition {
+  right: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.errorMessage {
+  font-size: 0.7rem;
+  color: var(--purple);
+  align-self: flex-end;
+}
