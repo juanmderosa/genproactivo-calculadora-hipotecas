@@ -8,7 +8,7 @@ export const Calculations = () => {
   return (
     <div className="calculationsDivs">
       {montoPrestamoCalculado > 0 && (
-        <div>
+        <div id="calculationsDivsValues">
           {valueType === "$" ? (
             <p>
               {" "}

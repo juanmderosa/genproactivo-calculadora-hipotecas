@@ -12,9 +12,9 @@ export const DinamicResults = () => {
 
   return (
     <div className="dinamicResultsContainer">
-      <div className="estimatedMontlyPayment">
+      <div className="estimatedMonthlyPayment">
         <div>
-          <div>
+          <div id="estimatedMonthlyPaymentValues">
             <strong>
               $
               {valueType === "$"

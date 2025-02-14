@@ -13,14 +13,14 @@
 }
 
 .tableButtonContainer {
-  padding: 1rem;
+  padding: 0 1rem 1rem 0;
   display: flex;
   width: 100%;
   justify-content: flex-end;
   gap: 2rem;
   button {
     background-color: var(--purple);
-    padding: 1rem;
+    padding: 0.5rem;
     color: var(--blancoPuro);
     border-radius: 15px;
     cursor: pointer;
