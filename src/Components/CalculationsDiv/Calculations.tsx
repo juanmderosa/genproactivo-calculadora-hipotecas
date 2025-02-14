@@ -10,27 +10,42 @@ export const Calculations = () => {
       {montoPrestamoCalculado > 0 && (
         <div id="calculationsDivsValues">
           {valueType === "$" ? (
-            <p>
+            <div>
               {" "}
-              <span>${formatNumber(montoPrestamoCalculado)} </span>
+              <span>
+                <p id="montoPrestamoPesos">
+                  ${formatNumber(montoPrestamoCalculado)}{" "}
+                </p>
+              </span>
               <span>/</span>
-              <span>UF {formatNumber(montoPrestamoCalculado / ufValue)}</span>
-            </p>
+              <span>
+                UF{" "}
+                <p id="monotoPrestamoUf">
+                  {formatNumber(montoPrestamoCalculado / ufValue)}
+                </p>
+              </span>
+            </div>
           ) : (
-            <p>
-              <span>${formatNumber(montoPrestamoCalculado * ufValue)}</span>
+            <div>
+              <span>
+                ${" "}
+                <p id="montoPrestamoPesos">
+                  {formatNumber(montoPrestamoCalculado * ufValue)}
+                </p>
+              </span>
               <span>/</span>
 
               <span>
                 UF
-                {formatNumber(montoPrestamoCalculado)}
+                <p id="monotoPrestamoUf">
+                  {" "}
+                  {formatNumber(montoPrestamoCalculado)}
+                </p>
               </span>
-            </p>
+            </div>
           )}
         </div>
       )}
-      {/*       <span>{`(Precio de escrituración - Pie - Bono pie)`}</span>
-       */}{" "}
       <h4>Monto del Préstamo</h4>
     </div>
   );
