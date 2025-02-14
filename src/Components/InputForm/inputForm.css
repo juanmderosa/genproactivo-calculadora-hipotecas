@@ -13,12 +13,12 @@
 }
 
 .inputFormContainer > label {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .inputForm {
   padding-inline: 0.5rem;
-  font-size: 12px;
+  font-size: 15x;
   flex: 1;
   color: var(--gris);
 }
@@ -49,7 +49,7 @@
 
   padding-inline: 0.3rem;
   color: var(--gris);
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .leftPosition {
