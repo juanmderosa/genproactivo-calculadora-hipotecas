@@ -17,7 +17,7 @@ export const DinamicResults = () => {
           <div id="estimatedMonthlyPaymentValues">
             <strong>
               $
-              <span>
+              <span id="montoPagoMensualPesos">
                 {valueType === "$"
                   ? formatNumber(pagoMensual)
                   : formatNumber(pagoMensual * ufValue)}
