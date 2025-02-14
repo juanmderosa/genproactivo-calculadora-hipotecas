@@ -63,7 +63,6 @@ export const ReactECharts = ({
       trigger: "item",
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       formatter: (params: any) => {
-        console.log(params);
         const formattedValue = params.value
           .toFixed(2)
           .replace(".", ",")

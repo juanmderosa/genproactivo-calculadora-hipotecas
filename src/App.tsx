@@ -5,6 +5,7 @@ import { DetallesPrestamo } from "./Components/LoanDetails/DetallesPrestamo";
 import { UFValue } from "./Components/UFValue/UFValue";
 import { useFormStore } from "./store/store";
 import { Tabla } from "./Components/TablaAmortizacion/Tabla";
+import { CTA } from "./Components/CTA/CTA";
 
 function App() {
   const {
@@ -12,6 +13,7 @@ function App() {
     setMontoPrestamoCalculado,
     montoPrestamoCalculado,
     setPagoMensual,
+    pagoMensual,
   } = useFormStore();
 
   const { costoInmueble, pie, bonoPie, tasaDeInteres, duracion } = formInfo;
@@ -38,6 +40,7 @@ function App() {
       </section>
       <Tabla />
       <DetallesPrestamo />
+      {montoPrestamoCalculado && pagoMensual && <CTA />}
     </main>
   );
 }
