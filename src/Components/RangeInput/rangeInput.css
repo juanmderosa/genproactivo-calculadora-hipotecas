@@ -9,7 +9,7 @@
 }
 
 .errorMessage {
-  font-size: 0.7rem;
+  font-size: 10px;
   color: var(--purple);
   align-self: flex-end;
 }

@@ -24,7 +24,10 @@ export const CTA = () => {
               ? formatNumber(pagoMensual * ufValue * 4)
               : formatNumber(pagoMensual * 4)}
           </strong>
-          . Con nuestra metodología podrías multiplicar hasta
+          .
+        </p>
+        <p>
+          Con nuestra metodología podrías multiplicar hasta
           <strong>
             {" "}
             4 propiedades y conseguir UF

@@ -60,8 +60,8 @@ export const DetallesPrestamo = () => {
         <IoHomeSharp />
         <h2>Detalles del Préstamo</h2>
       </div>
-      <article>
-        <div>
+      <article className="detailsItemsContainer">
+        <div className="detailItem">
           <p>
             Monto del Préstamo:
             <strong>
@@ -77,7 +77,7 @@ export const DetallesPrestamo = () => {
           </p>
           {renderProgressBar(montoPrestamoCalculado)}
         </div>
-        <div>
+        <div className="detailItem">
           <p>
             Pie:{" "}
             <strong>
@@ -93,7 +93,7 @@ export const DetallesPrestamo = () => {
           </p>
           {renderProgressBar(pie)}
         </div>
-        <div>
+        <div className="detailItem">
           <p>
             Bono Pie:{" "}
             <strong>
@@ -109,7 +109,7 @@ export const DetallesPrestamo = () => {
           </p>
           {renderProgressBar(bonoPie)}
         </div>
-        <div>
+        <div className="detailItem">
           <p>
             Total de Intereses pagados:{" "}
             <strong>
@@ -125,7 +125,7 @@ export const DetallesPrestamo = () => {
           </p>
           {renderProgressBar(interesesPagados)}
         </div>
-        <div>
+        <div className="detailItem">
           <p>
             CAE {tasaDeInteres + 1}%:{" "}
             <strong>
@@ -141,7 +141,7 @@ export const DetallesPrestamo = () => {
           </p>
           {renderProgressBar(cae)}
         </div>
-        <div>
+        <div className="detailItem">
           <p>
             Gastos Operacionales:{" "}
             <strong>

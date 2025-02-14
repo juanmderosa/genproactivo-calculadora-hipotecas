@@ -149,7 +149,7 @@ input:not(input[type="range"]) {
   height: 1.5rem;
   border-radius: 5px;
   font-family: "Ubuntu", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 label {

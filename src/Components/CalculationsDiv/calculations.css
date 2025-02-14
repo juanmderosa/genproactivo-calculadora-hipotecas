@@ -2,7 +2,7 @@
   border-radius: 15px;
   background-color: var(--green);
   color: var(--gris);
-  font-size: 12px;
+  font-size: 15px;
   box-shadow: 1px 1px 20px var(--grisClaro);
   padding: 1rem;
   display: flex;
@@ -27,7 +27,7 @@
     }
   }
   h4 {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
   }
 }

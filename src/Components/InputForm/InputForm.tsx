@@ -12,6 +12,8 @@ interface Props {
   clarificationText?: string;
   min?: number;
   max?: number;
+  hasSecondInput?: boolean;
+  secondInput?: JSX.Element;
 }
 
 const InputForm = ({
@@ -23,6 +25,7 @@ const InputForm = ({
   clarificationText,
   min,
   max,
+  hasSecondInput,
 }: Props) => {
   return (
     <div className="inputFormMainContainer">
@@ -56,6 +59,38 @@ const InputForm = ({
               }`}>
               {clarificationText}
             </span>
+          )}
+          {hasSecondInput && (
+            <>
+              <Controller
+                name={name}
+                control={control}
+                render={({ field }) => (
+                  <input
+                    className={`inputForm ${
+                      clarificationText === "UF" || clarificationText === "$"
+                        ? "inputPadLeft"
+                        : "inputPadRight"
+                    }`}
+                    id={`${name}-${type}`}
+                    type={type}
+                    min={min}
+                    max={max}
+                    {...field}
+                  />
+                )}
+              />
+              {clarificationText && (
+                <span
+                  className={`clarificationTextContainer ${
+                    clarificationText === "UF" || clarificationText === "$"
+                      ? "leftPosition"
+                      : "rightPosition"
+                  }`}>
+                  {clarificationText}
+                </span>
+              )}
+            </>
           )}
         </div>
       </div>
