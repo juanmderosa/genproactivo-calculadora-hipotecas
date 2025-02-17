@@ -6,7 +6,9 @@ export const TablaButtons = () => {
 
   return (
     <div className="tableButtonContainer">
-      <button onClick={() => setShowYearTable()}>Ver Tabla por Años</button>
+      <button onClick={() => setShowYearTable()}>
+        Ver Amortización por Años
+      </button>
     </div>
   );
 };
