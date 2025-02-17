@@ -62,7 +62,7 @@ export const DinamicResults = () => {
           </strong>
         </div>
         <div>
-          <p>Gastos Operacionales: 1%: </p>
+          <p>Gastos Operacionales 1%: </p>
           <strong>
             $
             {valueType === "$"
