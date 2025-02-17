@@ -1,5 +1,7 @@
 import { formProps } from "../../store/store";
 
+export const FACTOR_CAE = 1.13;
+
 export const totalInteresesPagados = (
   duracion: number,
   pagoMensual: number,
@@ -16,11 +18,15 @@ export const prestamoConIntereses = (duracion: number, pagoMensual: number) => {
   return duracion * 12 * pagoMensual;
 };
 
+export const calcularSeguro = (montoPrestamoCalculado: number) => {
+  return (montoPrestamoCalculado * FACTOR_CAE) / 100;
+};
+
 export const calcularCae = (
   montoPrestamoCalculado: number,
   tasaDeInteres: number
 ) => {
-  return (montoPrestamoCalculado * (tasaDeInteres + 1)) / 100;
+  return (montoPrestamoCalculado * (tasaDeInteres * FACTOR_CAE)) / 100;
 };
 export const calcularGastosOperacionales = (montoPrestamoCalculado: number) => {
   return (montoPrestamoCalculado * 1) / 100;

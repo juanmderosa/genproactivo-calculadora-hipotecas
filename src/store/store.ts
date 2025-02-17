@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { FACTOR_CAE } from "../helpers/Formulas/formulas";
 
 export interface formProps {
   costoInmueble: number;
@@ -79,7 +80,7 @@ export const useFormStore = create<StoreState>((set) => ({
     tasaDeInteres: number,
     duracion: number
   ) => {
-    const tasaMensual = tasaDeInteres / 100 / 12;
+    const tasaMensual = (tasaDeInteres * FACTOR_CAE) / 100 / 12;
     const meses = duracion * 12;
 
     if (montoPrestamoCalculado > 0 && tasaMensual > 0 && meses > 0) {

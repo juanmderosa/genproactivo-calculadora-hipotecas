@@ -8,6 +8,7 @@ import {
   totalInteresesPagados,
   calcularMontoTotal,
   calcularPorcentajeIncidencia,
+  FACTOR_CAE,
 } from "../../helpers/Formulas/formulas";
 import { useFormStore } from "../../store/store";
 import "./detalles.css";
@@ -127,7 +128,7 @@ export const DetallesPrestamo = () => {
         </div>
         <div className="detailItem">
           <p>
-            CAE {tasaDeInteres + 1}%:{" "}
+            CAE {`${formatNumber(formInfo.tasaDeInteres * FACTOR_CAE)}% `}:{" "}
             <strong>
               $
               {valueType === "$"

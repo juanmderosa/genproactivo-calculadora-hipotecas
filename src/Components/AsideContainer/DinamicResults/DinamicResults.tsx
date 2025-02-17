@@ -1,7 +1,8 @@
 import { formatNumber } from "../../../helpers/formatNumber";
 import {
-  calcularCae,
   calcularGastosOperacionales,
+  calcularSeguro,
+  FACTOR_CAE,
 } from "../../../helpers/Formulas/formulas";
 import { useFormStore } from "../../../store/store";
 import "./dinamicResults.css";
@@ -32,29 +33,31 @@ export const DinamicResults = () => {
             </strong>
           </div>
         </div>
-        <p>Valor cuota estimado </p>
+        <p style={{ display: "flex", flexDirection: "column" }}>
+          Valor cuota estimado
+          <span>
+            (Tasa CAE del{" "}
+            {`${formatNumber(formInfo.tasaDeInteres * FACTOR_CAE)}% `} incluye
+            costo de seguros){" "}
+          </span>
+        </p>
       </div>
 
       <div className="asociatedValues">
         <div>
-          <p>CAE estimado del {`${formInfo.tasaDeInteres + 1}%:`}</p>
+          <p>Costo de Seguro anual: </p>
           <strong>
             $
             {valueType === "$"
               ? montoPrestamoCalculado > 0 &&
                 pagoMensual > 0 &&
                 formInfo.tasaDeInteres > 0
-                ? formatNumber(
-                    calcularCae(montoPrestamoCalculado, formInfo.tasaDeInteres)
-                  )
+                ? formatNumber(calcularSeguro(montoPrestamoCalculado))
                 : 0
               : montoPrestamoCalculado > 0 &&
                 pagoMensual > 0 &&
                 formInfo.tasaDeInteres > 0
-              ? formatNumber(
-                  calcularCae(montoPrestamoCalculado, formInfo.tasaDeInteres) *
-                    ufValue
-                )
+              ? formatNumber(calcularSeguro(montoPrestamoCalculado) * ufValue)
               : 0}
           </strong>
         </div>
